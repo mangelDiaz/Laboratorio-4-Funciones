@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Gestor de turnos</title>
   </head>
   <body>
     <div id="app">
       <div class="turno-display">
         <h1 class="numero-turno">01</h1>
         <p class="texto-turno">Por favor, acérquese al mostrador</p>
+      </div>
+      <div class="turno-buttons turno-navigation">
+        <button type="button">Anterior</button>
+        <button type="button">Reiniciar</button>
+        <button type="button">Siguiente</button>
+      </div>
+      <div class="turno-buttons nuevo-turno">
+        <div class="nuevo-turno-input">
+          <label for="Nuevo turno">Nuevo turno</label>
+          <input type="number">
+        </div>
+      <button>Añadir</button>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
