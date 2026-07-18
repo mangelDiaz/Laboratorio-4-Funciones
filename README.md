@@ -33,3 +33,11 @@
 4. Cambiada la estructura de los condicional if para que abarquen otros dos casos en que habia que comprobar que no fueran null en las funciones, y añadidas dos comprobaciones más de null para limpiar de errores typescript en modo estricto
 
 ## Añadir padstart y ultimos retoques
+1. Añadido passtart al final de cada función para que añada un 0 al inicio si el numero solo tiene un digito
+2. añadidos if anidados en las funciones para que al pulsar el boton añadir no suba mas de 99, y que al pulsar el boton anterior no baje del 0
+3. añadido otro if para limitar los numeros que se pueden introducir en el input de 0 a 99.
+4. Añadida alerta si se introduce un número fuera de ese rango.
+
+## Finalizar ejercicio
+1. Git add, Git commit, Git push
+2. Hacer público el repositorio del ejercicio y entregar enlace

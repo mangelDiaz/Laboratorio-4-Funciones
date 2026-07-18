@@ -3,14 +3,20 @@ import "./style.css";
 //Leer valor del html
 const elementoMarcador = document.getElementById("marcador-turno");
 
+
 function sumandoUno () {
     //Sumar 1 al valor
     if (elementoMarcador !== null && 
         elementoMarcador.textContent !== null &&
         elementoMarcador !== undefined) {
-    const resultadoSuma = parseInt(elementoMarcador.textContent) + 1;
-    // Mostrar resultado
-    elementoMarcador.innerHTML = resultadoSuma.toString();
+        
+        const numeroActual = parseInt(elementoMarcador.textContent);
+
+        if (numeroActual < 99) {
+        const resultadoSuma = numeroActual + 1;   
+        // Mostrar resultado
+        elementoMarcador.innerHTML = resultadoSuma.toString().padStart(2, "0");
+        }
     }
 }
 
@@ -20,10 +26,14 @@ function restandoUno () {
     if (elementoMarcador !== null && 
         elementoMarcador.textContent !== null &&
         elementoMarcador !== undefined) {
-    const resultadoResta = parseInt(elementoMarcador.textContent) - 1;
+            
+        const numeroActual = parseInt(elementoMarcador.textContent);
 
-    // Mostrar resultado
-    elementoMarcador.innerHTML = resultadoResta.toString();
+        if (numeroActual > 0) {
+        const resultadoResta = numeroActual - 1;
+        // Mostrar resultado
+        elementoMarcador.innerHTML = resultadoResta.toString().padStart(2, "0");
+        }
     }
 }
 
@@ -35,7 +45,7 @@ function reiniciarCero () {
     // Mostrar resultado
     if (elementoMarcador !== null && 
         elementoMarcador !== undefined) {
-    elementoMarcador.innerHTML = resultadoReinicio.toString();
+    elementoMarcador.innerHTML = resultadoReinicio.toString().padStart(2, "0");
     }
 }
 
@@ -49,8 +59,12 @@ function cambiarTurno () {
 
     //Mostrar resultado
     if (elementoMarcador !== null && 
-        elementoMarcador !== undefined) {
-    elementoMarcador.innerHTML = resultadoTurno.toString();
+        elementoMarcador !== undefined &&
+        resultadoTurno >= 0 &&
+        resultadoTurno <= 99) {
+    elementoMarcador.innerHTML = resultadoTurno.toString().padStart(2, "0");
+    } else {
+        alert("Introduce un número entre 0 y 99");
     }
 }
 
@@ -73,9 +87,3 @@ const botonNuevo = document.getElementById("Nuevo-turno") as HTMLInputElement;
 if (botonNuevo) {
 botonNuevo.addEventListener("click", cambiarTurno);
 }
-
-
-/*
-const marcador = "99";
-console.log(marcador.padStart(2, "0"));
-*/
