@@ -26,3 +26,10 @@
 6. He finalizado la funcionalidad básica a nivel de javascript y ya funcionan todos los botones aunque hay muchos errores de tipado
 
 ## Corregir errores de typescript en main.ts
+
+1. Arreglado error de .value con (as HTMLInputElement)
+2. Arreglado errores de .innerHTML añadiendo .toSting ()
+3. Creado const general elementoMarcador y aplicada sustituyendo codigo repetido de mostrar el resultado con if (elementoMarcador !== null && elementoMarcador !== undefined) para evitar que salga null o undefined
+4. Cambiada la estructura de los condicional if para que abarquen otros dos casos en que habia que comprobar que no fueran null en las funciones, y añadidas dos comprobaciones más de null para limpiar de errores typescript en modo estricto
+
+## Añadir padstart y ultimos retoques

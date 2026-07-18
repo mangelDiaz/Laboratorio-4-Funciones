@@ -5,32 +5,53 @@ const elementoMarcador = document.getElementById("marcador-turno");
 
 function sumandoUno () {
     //Sumar 1 al valor
+    if (elementoMarcador !== null && 
+        elementoMarcador.textContent !== null &&
+        elementoMarcador !== undefined) {
     const resultadoSuma = parseInt(elementoMarcador.textContent) + 1;
     // Mostrar resultado
-    document.getElementById("marcador-turno").innerHTML = resultadoSuma;
+    elementoMarcador.innerHTML = resultadoSuma.toString();
+    }
 }
 
 function restandoUno () {
+
     //Restar 1 al valor
+    if (elementoMarcador !== null && 
+        elementoMarcador.textContent !== null &&
+        elementoMarcador !== undefined) {
     const resultadoResta = parseInt(elementoMarcador.textContent) - 1;
+
     // Mostrar resultado
-    document.getElementById("marcador-turno").innerHTML = resultadoResta;
+    elementoMarcador.innerHTML = resultadoResta.toString();
+    }
 }
 
 function reiniciarCero () {
+
     //Reiniciar a cero
     const resultadoReinicio = 0;
+
     // Mostrar resultado
-    document.getElementById("marcador-turno").innerHTML = resultadoReinicio;
+    if (elementoMarcador !== null && 
+        elementoMarcador !== undefined) {
+    elementoMarcador.innerHTML = resultadoReinicio.toString();
+    }
 }
 
 function cambiarTurno () {
+
     //Leer turno del input
-    const turno = document.getElementById("Nuevo turno").value;
+    const turno = (document.getElementById("Nuevo turno") as HTMLInputElement).value;
+
     //Convertir string a number
     const resultadoTurno = parseInt(turno);
+
     //Mostrar resultado
-    document.getElementById("marcador-turno").innerHTML = resultadoTurno;
+    if (elementoMarcador !== null && 
+        elementoMarcador !== undefined) {
+    elementoMarcador.innerHTML = resultadoTurno.toString();
+    }
 }
 
 const botonSumar = document.getElementById("sumar");
@@ -48,7 +69,7 @@ if (botonReiniciar) {
 botonReiniciar.addEventListener("click", reiniciarCero);
 }
 
-const botonNuevo = document.getElementById("Nuevo-turno");
+const botonNuevo = document.getElementById("Nuevo-turno") as HTMLInputElement;
 if (botonNuevo) {
 botonNuevo.addEventListener("click", cambiarTurno);
 }
