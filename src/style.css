@@ -21,7 +21,7 @@
   margin-top: 20px;
   padding: 10px;
   border-radius: 16px;
-  border: 1px solid #b8d80166;
+  border: 1px solid #7e7e7e66;
   box-shadow: 0 0 10px rgba(128, 128, 128, 0.1);
 }
 .turno-navigation {
@@ -126,10 +126,10 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: hsla(69, 99%, 43%, 0.3);
+  background-color: #c2c4f0;
 }
 button:active {
-  background-color: hsla(69, 100%, 40%, 0.6);
+  background-color: hsl(237, 60%, 75%);
   transform: scale(0.98);
 }
 
@@ -142,6 +142,6 @@ button:active {
     color: #747bff;
   }
   button {
-    background-color: #dbf83966;
+    background-color: #cbceff;
   }
 }
