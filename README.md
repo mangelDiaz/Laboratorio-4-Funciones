@@ -16,9 +16,13 @@
 5. Incorporar estilo active para los botones en root y eliminar focus
 6. Rehacer estilos llevandolo a azules
 
-## Añadir lógica en main.ts
+## Añadir lógica de javascript en main.ts
 
 1. He repasado los pdfs de JS y TS y he copiado y pegado las partes más relevantes para las operaciones
 2. He añadido la parte de Pstart y he tratado de hacer la funcion de Sumando1 al pulsar el botón Siguiente
 3. Numerosos errores impedian que funcionara al estar en modo estricto. He ido informandome de cada error y mas o menos arreglandolo en la primera función de sumar +1 con el botón siguiente
 4. Con el mismo funcionamiento he sacado restar -1 para el botón Anterior, y ponerlo en 0 con el botón Reiniciar, sin embargo, no lo entendía muy bien y tenía diez errores de tipado, luego decidí parar y volver a ver las clases para repasar conceptos.
+5. A medida que repaso los videos, pruebo diferentes alternativas para ver nuevas posibilidades de mejorar lo que tengo y repasar los conceptos
+6. He finalizado la funcionalidad básica a nivel de javascript y ya funcionan todos los botones aunque hay muchos errores de tipado
+
+## Corregir errores de typescript en main.ts
