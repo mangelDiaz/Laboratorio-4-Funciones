@@ -6,7 +6,8 @@ const elementoMarcador = document.getElementById("marcador-turno");
 
 function sumandoUno () {
     //Sumar 1 al valor
-    if (elementoMarcador !== null && 
+    if (elementoMarcador instanceof HTMLHeadingElement &&
+        elementoMarcador !== null && 
         elementoMarcador.textContent !== null &&
         elementoMarcador !== undefined) {
         
@@ -23,7 +24,8 @@ function sumandoUno () {
 function restandoUno () {
 
     //Restar 1 al valor
-    if (elementoMarcador !== null && 
+    if (elementoMarcador instanceof HTMLHeadingElement &&
+        elementoMarcador !== null && 
         elementoMarcador.textContent !== null &&
         elementoMarcador !== undefined) {
             
@@ -43,7 +45,8 @@ function reiniciarCero () {
     const resultadoReinicio = 0;
 
     // Mostrar resultado
-    if (elementoMarcador !== null && 
+    if (elementoMarcador instanceof HTMLHeadingElement &&
+        elementoMarcador !== null && 
         elementoMarcador !== undefined) {
     elementoMarcador.innerHTML = resultadoReinicio.toString().padStart(2, "0");
     }
@@ -52,38 +55,46 @@ function reiniciarCero () {
 function cambiarTurno () {
 
     //Leer turno del input
-    const turno = (document.getElementById("Nuevo turno") as HTMLInputElement).value;
+    const inputTurno = document.getElementById("Input-turno");
+    
+    //Hace comproación del input HTML
+    if (inputTurno instanceof HTMLInputElement) {
+        
+        //Extraer valor en string
+        const turno = inputTurno.value;
 
-    //Convertir string a number
-    const resultadoTurno = parseInt(turno);
+        //Convertir string a number
+        const resultadoTurno = parseInt(turno);
 
-    //Mostrar resultado
-    if (elementoMarcador !== null && 
-        elementoMarcador !== undefined &&
-        resultadoTurno >= 0 &&
-        resultadoTurno <= 99) {
-    elementoMarcador.innerHTML = resultadoTurno.toString().padStart(2, "0");
-    } else {
-        alert("Introduce un número entre 0 y 99");
+        //Mostrar resultado
+        if (elementoMarcador instanceof HTMLHeadingElement &&
+            elementoMarcador !== null && 
+            elementoMarcador !== undefined &&
+            resultadoTurno >= 0 &&
+            resultadoTurno <= 99) {
+        elementoMarcador.innerHTML = resultadoTurno.toString().padStart(2, "0");
+        } else {
+            alert("Introduce un número entre 0 y 99");
+        }
     }
-}
+} 
 
 const botonSumar = document.getElementById("sumar");
-if (botonSumar) {
+if (botonSumar instanceof HTMLButtonElement) {
 botonSumar.addEventListener("click", sumandoUno);
 }
 
 const botonRestar = document.getElementById("restar");
-if (botonRestar) {
+if (botonRestar instanceof HTMLButtonElement) {
 botonRestar.addEventListener("click", restandoUno);
 }
 
 const botonReiniciar = document.getElementById("reiniciar");
-if (botonReiniciar) {
+if (botonReiniciar instanceof HTMLButtonElement) {
 botonReiniciar.addEventListener("click", reiniciarCero);
 }
 
-const botonNuevo = document.getElementById("Nuevo-turno") as HTMLInputElement;
-if (botonNuevo) {
+const botonNuevo = document.getElementById("Nuevo-turno");
+if (botonNuevo instanceof HTMLButtonElement) {
 botonNuevo.addEventListener("click", cambiarTurno);
 }
